@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+        <html lang="en">
+        <head>
+          <meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>About Me</title>
+          <script src="https://cdn.tailwindcss.com"></script>
+        </head>
+        <body>
+          <div class="text-black"><header class="flex flex-row justify-between items-center baloo-2 font-bold text-[#242424] m-0 relative shadow-lg"><div class="fixed top-1/2 right-2 bg-blue-400 text-white cursor-pointer z-30"><button>Edit</button></div><div></div><button id="hamburgerButton" class="fixed top-4 right-2 p-2 text-black z-30 md:hidden"><div id="bar1" class="w-8 h-1 bg-black my-1 transition-transform duration-300 "></div><div id="bar2" class="w-8 h-1 bg-black my-1 transition-opacity duration-300 opacity-100"></div><div id="bar3" class="w-8 h-1 bg-black my-1 transition-transform duration-300 "></div></button><div id="sidebar" class="fixed top-0 right-0 w-64 min-h-screen bg-white shadow-lg z-40 p-4 md:hidden transition-transform transform translate-x-full"><div id="close" class="absolute top-0 right-5 bg-red-400 rounded-full text-white px-3 py-1 z-30"><p>X</p></div><div class="flex flex-col"><div class="relative"><a href="/summerwebsite/services.html" class="text-lg cursor-pointer dropdown-link ">Services</a><div class="absolute top-full right-0 w-48 bg-white text-black shadow-lg p-4 rounded-lg z-40 hidden dropdown-menu flex flex-col"><a class="text-lg text-gray-700 cursor-pointer hover:underline" href="/summerwebsite/services/Food.html">Food</a></div></div><div class="relative"><a href="/summerwebsite/aboutme.html" class="text-lg cursor-pointer  ">About Me</a><div class="absolute top-full right-0 w-48 bg-white text-black shadow-lg p-4 rounded-lg z-40 hidden  flex flex-col"></div></div><div class="relative"><a href="/summerwebsite/contact.html" class="text-lg cursor-pointer  ">Contact</a><div class="absolute top-full right-0 w-48 bg-white text-black shadow-lg p-4 rounded-lg z-40 hidden  flex flex-col"></div></div><div class="relative"><a href="/summerwebsite/gallery.html" class="text-lg cursor-pointer  ">Gallery</a><div class="absolute top-full right-0 w-48 bg-white text-black shadow-lg p-4 rounded-lg z-40 hidden  flex flex-col"></div></div></div></div><div class="relative"><a class="text-2xl text-center md:text-left text-[#000080] cursor-pointer" href="/summerwebsite/index.html"><p>My Photography</p></a></div><div class="hidden md:flex flex-col md:justify-center md:items-center gap-2 mt-8"><div class="flex gap-6"><div class="relative"><a class="text-lg text-gray-700 cursor-pointer hover:underline dropdown-link" href="/summerwebsite/services.html">Services</a><div class="absolute top-full right-0 w-48 bg-white shadow-lg p-4 rounded-lg z-40 hidden dropdown-menu"><a href="/summerwebsite/services/Food" class="text-lg text-gray-700 cursor-pointer hover:underline">Food</a></div></div><div class="relative"><a class="text-lg text-gray-700 cursor-pointer hover:underline " href="/summerwebsite/aboutme.html">About Me</a><div class="absolute top-full right-0 w-48 bg-white shadow-lg p-4 rounded-lg z-40 hidden "></div></div><div class="relative"><a class="text-lg text-gray-700 cursor-pointer hover:underline " href="/summerwebsite/contact.html">Contact</a><div class="absolute top-full right-0 w-48 bg-white shadow-lg p-4 rounded-lg z-40 hidden "></div></div><div class="relative"><a class="text-lg text-gray-700 cursor-pointer hover:underline " href="/summerwebsite/gallery.html">Gallery</a><div class="absolute top-full right-0 w-48 bg-white shadow-lg p-4 rounded-lg z-40 hidden "></div></div></div></div></header></div><div class="flex flex-col items-center justify-center align-center text-center w-full px-6"><p class="text-4xl font-semibold text-center -mb-6">About Me</p><div class="flex flex-col md:flex-row items-center justify-center mx-auto text-center gap-6 w-full min-h-screen"><div class="flex flex-col items-center justify-center align-center gap-2 text-center"><img src="https://saastemplatesstorage.blob.core.windows.net/sasstemplatesstorages/1734454623449-Screenshot%202024-11-26%20093219.png" class="w-full max-w-3xl h-auto object-cover rounded-lg shadow-lg" alt="About Me"/></div><div class="flex flex-col justify-start text-left max-w-xl w-full align-center"><div class="text-lg leading-relaxed"><div class="whitespace-pre-line"><p>My name is Ashley Dobson and I'm a professional photographer. I take the best pictures of people and food (my two passions).</p><p><br></p><p>Taking pictures of food started when I was dating someone and I just had to take pictures to post on Instragram and Facebook.</p><p><br></p><p>My love for portraits came when I was doing school photos and realized I wanted to make someone that happy.</p></div></div></div></div></div>
+          <script>
+                const dropdownLinks = document.querySelectorAll('.dropdown-link');
+const dropdownMenus = document.querySelectorAll('.dropdown-menu');
+
+// Function to show a dropdown
+function showDropdown(menu) {
+    menu.classList.remove('hidden');
+}
+
+// Function to hide a dropdown
+function hideDropdown(menu) {
+    menu.classList.add('hidden');
+}
+
+// Attach event listeners to each dropdown link
+dropdownLinks.forEach((link, index) => {
+    const menu = dropdownMenus[index];
+
+    // Show dropdown on hover
+    link.addEventListener('mouseenter', () => showDropdown(menu));
+
+    // Keep dropdown visible when hovered
+    menu.addEventListener('mouseenter', () => showDropdown(menu));
+
+    // Hide dropdown when mouse leaves the link
+    link.addEventListener('mouseleave', () => {
+        setTimeout(() => {
+            if (!menu.matches(':hover')) {
+                hideDropdown(menu);
+            }
+        }, 200);
+    });
+
+    // Hide dropdown when mouse leaves the menu
+    menu.addEventListener('mouseleave', () => hideDropdown(menu));
+});
+const hamburgerButton = document.getElementById("hamburgerButton");
+const closeButton = document.getElementById('close')
+  const sidebar = document.getElementById("sidebar");
+  const bar1 = document.getElementById("bar1");
+  const bar2 = document.getElementById("bar2");
+  const bar3 = document.getElementById("bar3");
+
+  hamburgerButton.addEventListener("click", function () {
+    // Toggle sidebar visibility by adding/removing the translate-x-full class
+    sidebar.classList.toggle("translate-x-full");
+  });
+  closeButton.addEventListener("click", function () {
+    sidebar.classList.toggle("translate-x-full");
+  })
+            </script>
+        </body>
+        </html>

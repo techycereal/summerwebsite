@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+      <html lang="en">
+      <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Title</title>
+
+        <script src="https://cdn.tailwindcss.com"></script>
+      </head>
+      <body>
+        <div><div><header class="flex flex-row justify-between items-center baloo-2 font-bold text-[#242424] m-0 relative shadow-lg"><div class="fixed top-1/2 right-2 bg-blue-400 text-white cursor-pointer z-30"><button>Edit</button></div><div></div><button id="hamburgerButton" class="fixed top-4 right-2 p-2 text-black z-30 md:hidden"><div id="bar1" class="w-8 h-1 bg-black my-1 transition-transform duration-300 "></div><div id="bar2" class="w-8 h-1 bg-black my-1 transition-opacity duration-300 opacity-100"></div><div id="bar3" class="w-8 h-1 bg-black my-1 transition-transform duration-300 "></div></button><div id="sidebar" class="fixed top-0 right-0 w-64 min-h-screen bg-white shadow-lg z-40 p-4 md:hidden transition-transform transform translate-x-full"><div id="close" class="absolute top-0 right-5 bg-red-400 rounded-full text-white px-3 py-1 z-30"><p>X</p></div><div class="flex flex-col"><div class="relative"><a href="/summerwebsite/services.html" class="text-lg cursor-pointer dropdown-link ">Services</a><div class="absolute top-full right-0 w-48 bg-white text-black shadow-lg p-4 rounded-lg z-40 hidden dropdown-menu flex flex-col"><a class="text-lg text-gray-700 cursor-pointer hover:underline" href="/summerwebsite/services/Food.html">Food</a></div></div><div class="relative"><a href="/summerwebsite/aboutme.html" class="text-lg cursor-pointer  ">About Me</a><div class="absolute top-full right-0 w-48 bg-white text-black shadow-lg p-4 rounded-lg z-40 hidden  flex flex-col"></div></div><div class="relative"><a href="/summerwebsite/contact.html" class="text-lg cursor-pointer  ">Contact</a><div class="absolute top-full right-0 w-48 bg-white text-black shadow-lg p-4 rounded-lg z-40 hidden  flex flex-col"></div></div><div class="relative"><a href="/summerwebsite/gallery.html" class="text-lg cursor-pointer  ">Gallery</a><div class="absolute top-full right-0 w-48 bg-white text-black shadow-lg p-4 rounded-lg z-40 hidden  flex flex-col"></div></div></div></div><div class="relative"><a class="text-2xl text-center md:text-left text-[#000080] cursor-pointer" href="/summerwebsite/index.html"><p>My Photography</p></a></div><div class="hidden md:flex flex-col md:justify-center md:items-center gap-2 mt-8"><div class="flex gap-6"><div class="relative"><a class="text-lg text-gray-700 cursor-pointer hover:underline dropdown-link" href="/summerwebsite/services.html">Services</a><div class="absolute top-full right-0 w-48 bg-white shadow-lg p-4 rounded-lg z-40 hidden dropdown-menu"><a href="/summerwebsite/services/Food" class="text-lg text-gray-700 cursor-pointer hover:underline">Food</a></div></div><div class="relative"><a class="text-lg text-gray-700 cursor-pointer hover:underline " href="/summerwebsite/aboutme.html">About Me</a><div class="absolute top-full right-0 w-48 bg-white shadow-lg p-4 rounded-lg z-40 hidden "></div></div><div class="relative"><a class="text-lg text-gray-700 cursor-pointer hover:underline " href="/summerwebsite/contact.html">Contact</a><div class="absolute top-full right-0 w-48 bg-white shadow-lg p-4 rounded-lg z-40 hidden "></div></div><div class="relative"><a class="text-lg text-gray-700 cursor-pointer hover:underline " href="/summerwebsite/gallery.html">Gallery</a><div class="absolute top-full right-0 w-48 bg-white shadow-lg p-4 rounded-lg z-40 hidden "></div></div></div></div></header></div><div class="flex flex-col-reverse sm:flex-row items-center justify-center text-[#242424]"><div class="carousel-container relative w-full h-[30rem] sm:h-[40rem] md:h-[50rem] lg:h-[60rem] overflow-hidden"><img id="carousel-image" src="https://saastemplatesstorage.blob.core.windows.net/sasstemplatesstorages/1734454411216-IMG_0014.jpeg" alt="Wedding" class="carousel-image object-cover w-full h-full"/><button id="carousel-prev" class="carousel-prev absolute top-1/2 left-2 sm:left-4 transform -translate-y-1/2 bg-transparent border border-gray-300 p-1 sm:p-2 rounded-full hover:bg-gray-100" style="z-index:1"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 sm:w-6 sm:h-6"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5"></path></svg></button><button id="carousel-next" class="carousel-next absolute top-1/2 right-2 sm:right-4 transform -translate-y-1/2 bg-transparent border border-gray-300 p-1 sm:p-2 rounded-full hover:bg-gray-100" style="z-index:1"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 sm:w-6 sm:h-6"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5L15.75 12l-7.5 7.5"></path></svg></button><div class="absolute inset-0 bg-gray-900 opacity-50"></div><div class="carousel-overlay absolute top-1/4 left-1/4 transform -translate-y-1/2 text-white text-left w-full px-6"><h1 class="text-4xl font-bold sm:text-3xl md:text-4xl lg:text-5xl"><p>Ashley Dobson Photography</p></h1><div class="text-white"><p>I make sure to get the best portraits of people and food</p></div></div></div></div><div class="flex flex-col items-center pb-28 font-baloo w-full px-4"><p class="text-4xl font-semibold mt-24 text-gray-800">OUR SERVICES</p><hr class="w-1/3 border-black my-2"/><div class="flex flex-col sm:flex-row flex-wrap gap-8 w-full justify-center items-center mx-auto mt-12"><div class="flex flex-col items-center overflow-hidden transform relative rounded-xl "><img src="https://saastemplatesstorage.blob.core.windows.net/sasstemplatesstorages/1734454353104-blob" alt="New Service" class="w-auto h-60 object-cover aspect-square rounded-full"/><div class="flex flex-col items-center"><p class="mt-2 text-center font-semibold "><p>Portraits</p></p></div></div><div class="flex flex-col items-center overflow-hidden transform relative rounded-xl "><img src="https://saastemplatesstorage.blob.core.windows.net/sasstemplatesstorages/1734454363460-blob" alt="New Service" class="w-auto h-60 object-cover aspect-square rounded-full"/><div class="flex flex-col items-center"><p class="mt-2 text-center font-semibold "><p>Food</p></p></div></div></div></div><div class="flex flex-col items-center justify-center font-baloo w-full md:px-12 bg-gray-50"><p class="text-4xl font-bold mt-16 text-black">About Me</p><hr class="w-1/3 border-t-4 border-black my-6"/><div class="flex flex-col gap-12 w-full items-center"><div class="flex flex-col md:flex-row gap-8 items-center p-6 transition-all duration-300"><img src="https://saastemplatesstorage.blob.core.windows.net/sasstemplatesstorages/1734444793036-blob" alt="Stylist" class="rounded-lg w-full md:max-w-[18rem] h-auto shadow-md"/><div class="text-gray-800 text-lg font-medium w-full md:w-[30rem]"><div><p>Hi, I’m Ashley Dobson! I’m passionate about capturing life’s most meaningful moments through photography. With a keen eye for detail and a creative touch, I specialize in wedding, graduation, and preschool photography. My goal is to make every session feel comfortable, fun, and authentic, ensuring that your memories are preserved beautifully.</p></div></div></div></div></div><footer class="bg-gray-800 text-white py-6"><div class="text-center"><p class="text-sm">© <!-- -->2024<!-- --> Alexander Milliken. All rights reserved.</p></div></footer><div class="fixed bottom-0 flex left-0"><button class="bg-blue-400 text-white rounded p-2">Generate</button></div></div>
+        <script>
+                const dropdownLinks = document.querySelectorAll('.dropdown-link');
+const dropdownMenus = document.querySelectorAll('.dropdown-menu');
+
+// Function to show a dropdown
+function showDropdown(menu) {
+    menu.classList.remove('hidden');
+}
+
+// Function to hide a dropdown
+function hideDropdown(menu) {
+    menu.classList.add('hidden');
+}
+
+// Attach event listeners to each dropdown link
+dropdownLinks.forEach((link, index) => {
+    const menu = dropdownMenus[index];
+
+    // Show dropdown on hover
+    link.addEventListener('mouseenter', () => showDropdown(menu));
+
+    // Keep dropdown visible when hovered
+    menu.addEventListener('mouseenter', () => showDropdown(menu));
+
+    // Hide dropdown when mouse leaves the link
+    link.addEventListener('mouseleave', () => {
+        setTimeout(() => {
+            if (!menu.matches(':hover')) {
+                hideDropdown(menu);
+            }
+        }, 200);
+    });
+
+    // Hide dropdown when mouse leaves the menu
+    menu.addEventListener('mouseleave', () => hideDropdown(menu));
+});
+const hamburgerButton = document.getElementById("hamburgerButton");
+const closeButton = document.getElementById('close')
+  const sidebar = document.getElementById("sidebar");
+  const bar1 = document.getElementById("bar1");
+  const bar2 = document.getElementById("bar2");
+  const bar3 = document.getElementById("bar3");
+
+  hamburgerButton.addEventListener("click", function () {
+    // Toggle sidebar visibility by adding/removing the translate-x-full class
+    sidebar.classList.toggle("translate-x-full");
+  });
+  closeButton.addEventListener("click", function () {
+    sidebar.classList.toggle("translate-x-full");
+  })
+    
+      const images = ['https://saastemplatesstorage.blob.core.windows.net/sasstemplatesstorages/1734454411216-IMG_0014.jpeg','https://saastemplatesstorage.blob.core.windows.net/sasstemplatesstorages/1734454412188-IMG_5462.jpeg','https://saastemplatesstorage.blob.core.windows.net/sasstemplatesstorages/1734454413049-IMG_6243.jpeg','https://saastemplatesstorage.blob.core.windows.net/sasstemplatesstorages/1734454414123-IMG_5726.jpeg','https://saastemplatesstorage.blob.core.windows.net/sasstemplatesstorages/1734454415344-IMG_6257.JPG']
+      let currentIndex = 0;
+    
+    const imageElement = document.getElementById('carousel-image');
+    const prevButton = document.getElementById('carousel-prev');
+    const nextButton = document.getElementById('carousel-next');
+
+    // Function to show the image at the current index
+    function updateCarousel() {
+      imageElement.src = images[currentIndex];
+    }
+
+    // Previous button click handler
+    prevButton.addEventListener('click', () => {
+      currentIndex = (currentIndex - 1 + images.length) % images.length; // Looping back to last image
+      updateCarousel();
+    });
+
+    // Next button click handler
+    nextButton.addEventListener('click', () => {
+      currentIndex = (currentIndex + 1) % images.length; // Looping back to first image
+      updateCarousel();
+    });
+
+    // Automatic slide change every 3 seconds
+    setInterval(() => {
+      currentIndex = (currentIndex + 1) % images.length;
+      updateCarousel();
+    }, 3000);
+      
+            </script>
+      </body>
+      </html>
